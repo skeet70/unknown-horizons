@@ -171,10 +171,6 @@ class TraderShipOverviewTab(OverviewTab):
 	helptext = _("Ship overview")
 
 class EnemyShipOverviewTab(OverviewTab):
-	widget = 'overview_enemyunit.xml'
+	widget = 'overview_enemybuilding.xml'
 	icon_path = 'icons/tabwidget/ship/ship_inv'
 	helptext = _("Ship overview")
-
-	def init_widget(self):
-		super(ShipOverviewTab, self).init_widget()
-		self.widget.findChild(name="headline").text = self.instance.owner.name
