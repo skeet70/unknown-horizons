@@ -118,11 +118,13 @@ class BuildTab(TabInterface):
 
 	def init_widget(self):
 		self.__current_settlement = None
-		headline_lbl = self.widget.child_finder('headline')
+
+	@property
+	def tab_headline(self):
 		if self.headline: # prefer specific headline
-			headline_lbl.text = self.headline
+			return self.headline
 		elif self.unlocking_strategy == self.__class__.unlocking_strategies.tab_per_tier:
-			headline_lbl.text = _(self.session.db.get_settler_name(self.tabindex))
+			return _(self.session.db.get_settler_name(self.tabindex))
 
 	def set_content(self):
 		"""Parses self.row_definitions and sets the content accordingly"""

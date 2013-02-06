@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TabContainer>
+<TabContainer headline="{tab_headline}">
 	<Container position="0,32" size="211,80">
 		<Label position="0,11"   name="label_01" />
 		<Label position="54,11"  name="label_11" />
