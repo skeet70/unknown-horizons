@@ -66,11 +66,9 @@ class AccountTab(MainSquareTab):
 		self._windows = self.instance.session.ingame_gui.windows
 		self.prod_overview = ProductionOverview(self._windows, self.settlement)
 
-	def show_production_overview(self):
-		self._windows.toggle(self.prod_overview)
-
 	def refresh(self):
 		super(AccountTab, self).refresh()
+		self.refresh_collector_utilization()
 		taxes = self.settlement.cumulative_taxes
 		running_costs = self.settlement.cumulative_running_costs
 		buy_expenses = self.settlement.get_component(TradePostComponent).buy_expenses
@@ -82,6 +80,14 @@ class AccountTab(MainSquareTab):
 		self.widget.child_finder('buying').text = unicode(buy_expenses)
 		self.widget.child_finder('sale').text = unicode(sell_income)
 		self.widget.child_finder('balance').text = unicode(sign+' '+str(abs(balance)))
+
+	def refresh_collector_utilization(self):
+		utilization = int(round(self.instance.get_collector_utilization() * 100))
+		self.widget.findChild(name="collector_utilization").text = unicode(utilization) + u'%'
+
+	def show_production_overview(self):
+		self._windows.toggle(self.prod_overview)
+
 
 class MainSquareOverviewTab(AccountTab):
 	helptext = _('Main square overview')
