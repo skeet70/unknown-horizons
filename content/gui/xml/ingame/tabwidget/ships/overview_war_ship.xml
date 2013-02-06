@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AutoResizeContainer>
+<TabContainer>
 	<Container position="0,10" size="50,50">
 		<ToggleImageButton name="trade_bg" path="images/buttons/msg_button" />
 		<ToggleImageButton name="trade" helptext="Trade" position="10,9"
@@ -39,4 +39,4 @@
 		<Inventory name="weapon_inventory" size="50,50" uncached="1" />
 	</AutoResizeContainer>
 
-</AutoResizeContainer>
+</TabContainer>
