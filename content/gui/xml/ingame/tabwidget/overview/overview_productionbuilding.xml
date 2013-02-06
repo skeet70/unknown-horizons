@@ -1,16 +1,6 @@
 <?xml version="1.0"?>
 <!-- Overview tab for buildings -->
-<Container size="250,450">
-<TabBG amount="6" />
-
-<Container position="0,70" size="250,400">
-
-	<HBox position="22,7"  min_size="170,20"  size="230,20">
-	<Spacer min_size="0"  max_size="50" />
-		<Label name="name" />
-	</HBox>
-
-	<hr position="20,30" />
+<TabContainer>
 
 	<HBox min_size="125,20" max_size="225,20" position="25,40">
 		<!-- the widgets in this container have no text because it is set
@@ -47,5 +37,4 @@
 	</Container>
 	-->
 
-</Container>
-</Container>
+</TabContainer>
