@@ -1,23 +1,27 @@
 <?xml version="1.0"?>
-<Container size="250,350" name="editor_settings">
-	<TabBG amount="4" />
+<TabContainer name="editor_settings" headline="Map editor">
 
-	<Container position="0, 20" size="250, 350" max_size="250, 350">
-		<ImageButton name="size_1" size="32,32" position="25, 55"
+	<Label text="Select brush size:" name="headline_brush_size" position="5,5" />
+	<AutoResizeContainer position="5,30">
+		<ImageButton name="size_1" size="32,32" position="20,0"
 			path="icons/ship/smallbutton" />
-		<Label position="33, 88" text="1" name="lbl_1" comment="noi18n" />
+		<Label position="30, 30" text="1" name="lbl_1" comment="noi18n" />
 
-		<ImageButton name="size_2" size="32,32" position="67, 55"
+		<ImageButton name="size_2" size="32,32" position="70,0"
 			path="icons/ship/smallbutton" />
-		<Label position="75, 88" text="2" name="lbl_2" comment="noi18n" />
+		<Label position="80, 30" text="2" name="lbl_2" comment="noi18n" />
 
-		<ImageButton name="size_3" size="32,32" position="110, 55"
+		<ImageButton name="size_3" size="32,32" position="120,0"
 			path="icons/ship/smallbutton" />
-		<Label position="115, 88" text="3" name="lbl_3" comment="noi18n" />
-	</Container>
+		<Label position="130,30" text="3" name="lbl_3" comment="noi18n" />
+	</AutoResizeContainer>
 
-	<ImageButton position="40,150" name="default_land" />
-	<ImageButton position="120,150" name="sand" />
-	<ImageButton position="40,200" name="shallow_water" />
-	<ImageButton position="120,200" name="water" />
-</Container>
+	<Label text="Select terrain:" name="headline_terrain" position="5,80" />
+	<AutoResizeContainer position="10,105">
+		<ImageButton position="0,0" name="default_land" />
+		<ImageButton position="80,0" name="sand" />
+		<ImageButton position="0,40" name="shallow_water" />
+		<ImageButton position="80,40" name="water" />
+	</AutoResizeContainer>
+
+</TabContainer>
